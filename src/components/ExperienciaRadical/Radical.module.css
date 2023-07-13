@@ -1,0 +1,40 @@
+.radicalSection{
+    background-color: var(--color-secondary);
+    padding: 2rem 0;
+    color: white;
+}
+
+.radicalTitle{
+    margin: 0rem 0 2rem 1rem;
+    color: white;
+}
+
+.radicalBtn{
+    border: 1px solid #dcdcdc;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    max-width: 400;
+    margin: 0 auto;
+    cursor: pointer;
+    background: var(--color-primary);
+    background: var(--color-primary2);
+    background: linear-gradient(
+      0deg,
+      var(--color-primary) 0%,
+      var(--color-primary2) 100%
+    );
+    transition: 0.3s all ease-in;
+}
+
+.radicalBtn:hover{
+    color: #000;
+    cursor: pointer;
+}
+
+@media (width <= 640px) {
+    .radicalBtn {
+        font-size: 1rem;
+    }
+}

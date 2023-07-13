@@ -1,0 +1,240 @@
+.sectionPresupuesto{
+    background-color: var(--color-secondary);
+    background-image: url(../../assets/money.png);
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position: 5% 94%;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.presupuestoTitle{
+    margin: var(--sectionTitleMargin);
+    font-size: var(--sectionTitleFontSize);
+    color: white;
+}
+
+.budgetText {
+    font-size: var(--text-size);
+  }
+
+.text{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.inputPres{
+    border: 1px solid white;
+    border-radius: 0.2rem;
+    color: white;
+    height: 1.5rem;
+    padding-left: 0.25rem;
+    margin-top: 0.3rem;
+}
+
+.cards{
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    margin: 1rem auto;
+}
+
+.card {
+    gap: 2rem;
+    width: 7rem;
+    height: 10.5rem;
+    perspective: 80rem;
+}
+
+.card__inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+
+.card__inner.is-flipped {
+    transform:  rotateY(180deg);
+}
+
+.card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; */
+    overflow: hidden;
+    border-radius: 0.7rem;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+    border: 1px solid white;
+}
+
+.card__face__front {
+    background-image: linear-gradient(to bottom left, var(--color-primary2), var(--color-primary));
+    background: var(--color-primary2);
+    background: var(--color-primary);
+    background: linear-gradient(
+        to bottom right, 
+      var(--color-primary) 0%,
+      var(--color-primary2) 85%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+}
+
+.card__button {
+    color: white;
+    font-size: 2.5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.card__face__back {
+    background: var(--color-primary);
+    background: var(--color-primary2);
+    background: linear-gradient(
+        to top left, 
+      var(--color-primary) 0%,
+      var(--color-primary2) 85%
+    );
+    transition: 0.3s all ease-in;
+    transform: rotateY(0deg);
+}
+
+.card__face__back h3 {
+    color: white;
+    font-size: 2.5rem;
+}
+
+
+.card__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__number {
+    position: relative;
+    padding: 1rem;
+}
+
+.card__number:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 0 0 50% 0;
+    background-image: linear-gradient(to bottom left, var(--color-primary) 10%, var(--color-primary2) 115%);
+}
+
+.resultado{
+    font-size: 1.5rem;
+    margin: 1rem auto;
+    color: var(--text-color-secondary);
+}
+
+.resultContainer{
+    width: 20rem;
+    margin: 1rem auto;
+    height: 5rem;
+    padding: 1.2rem;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.6rem;
+    border-left: 1px solid rgba(94, 93, 93, 0.3);
+    border-top: 1px solid rgba(94, 93, 93, 0.3);
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur(5px);
+}
+
+@media (640px <= width <= 768px) {
+    .cards{
+        width: 85%;
+    }
+
+    .presupuestoTitle {
+        font-size: var(--sectionTitleFontSizeSmall);
+    }
+    
+    .card {
+        width: 6rem;
+        height: 8.5rem;
+        perspective: 80rem;
+    }
+
+    .resultContainer{
+        width: 16rem;
+        margin: 1rem auto;
+        height: 4rem;
+    }
+
+    .resultado{
+        font-size: 1.2rem;
+    }
+}
+
+@media (width <= 640px) {
+    .sectionPresupuesto{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 1rem 0.5rem;
+        background-size: 13.5%;
+        background-position: 3% 95%;
+    }
+
+    .presupuestoTitle{
+        font-size: var(--sectionTitleFontSizeXs);
+    }
+
+    .budgetText {
+        font-size: var(--text-sizeXS);
+      }
+
+    .cards{
+        width: 100%;
+    }
+    
+    .card {
+        width: 4rem;
+        height: 6rem;
+        perspective: 80rem;
+    }
+
+    .resultContainer{
+        width: 13rem;
+        margin: 1rem auto;
+        height: 3rem;
+    }
+
+    .resultado{
+        font-size: 1rem;
+    }
+
+    .text{
+        font-size: 1rem;
+        margin: 0.5rem auto;
+    }
+}

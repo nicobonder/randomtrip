@@ -1,0 +1,63 @@
+.separatorSection {
+  background-color: var(--color-primary);
+  margin: -0.5rem 0;
+  padding: 0;
+  width: 100%;
+}
+
+.separatorTwoSection {
+  background-color: var(--color-secondary);
+  margin: -0.5rem 0;
+  transform: rotateX(180deg);
+}
+
+.svgContainer {
+  width: 100%;
+  height: 10rem;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0rem;
+  background: var(--color-primary);
+  background: linear-gradient(
+    180deg,
+    var(--color-primary) 0%,
+    #7072ec 65%,
+    var(--color-secondary) 95%
+  );
+}
+
+.svgContainerTwo {
+  width: 100%;
+  height: 8rem;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0rem;
+  background: var(--color-primary);
+  background: linear-gradient(
+    180deg,
+    var(--color-primary) 5%,
+    #7072ec 60%,
+    var(--color-secondary) 100%
+  );
+}
+
+#grad3 {
+  width: 100% !important;
+  margin-bottom: 2rem !important;
+}
+
+#grad4 {
+  width: 100% !important;
+}
+
+.svgSeparator {
+  width: 100%;
+}
+
+.pathSVG {
+  width: 100% !important;
+}
+
+.div {
+  width: auto;
+}

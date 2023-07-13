@@ -1,0 +1,199 @@
+.sectionKm {
+    background-color:var(--color-primary);
+    color: var(--text-color-primary);
+    padding: 1rem 1rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.airplane{
+    width: 10rem;
+    height: 10rem;
+}
+
+.kmTitle {
+    margin: var(--sectionTitleMargin);
+    font-size: var(--sectionTitleFontSize);
+    color: var(--text-color-primary);
+}
+
+.inputs{
+    display: flex;
+    width: 90%;
+    margin: 1rem auto;
+    justify-content: center;
+    gap: 1rem;
+    height: 3.5rem;
+}
+
+.kmInputDiv {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+  }
+
+.errorMessage {
+    color: var(--text-color-secondary);
+    margin: 0.1rem 0 0 0;
+    font-size: 0.8rem;
+    text-align: left;
+}
+
+.danger{
+    border: 1px var(--text-color-secondary) solid;
+}
+
+.kmText {
+    font-size: var(--text-size);
+}
+
+input{
+    background-color: transparent;
+    border-radius: 0.2rem;
+    border: 1px solid var(--text-color-primary);
+    height: 1.5rem;
+    font-size: var(--text-size);
+    color: var(--text-color-primary);
+    padding-left: 0.25rem;
+}
+::placeholder { 
+    color: var(--text-color-primary);
+    font-size: 0.9em;
+    padding-left: 0.2rem;
+}
+
+.kmButn{
+    border: 1px solid #494949;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.5rem;
+    color: var(--text-color-primary);
+    font-size: 1.2rem;
+    max-width: 450px;
+    margin: 0 auto;
+    cursor: pointer;
+    background: var(--color-primary);
+    background: var(--color-primary2);
+    background: linear-gradient(
+      0deg,
+      var(--color-primary) 0%,
+      var(--color-primary2) 100%
+    );
+    transition: 0.3s all ease-in;
+
+}
+
+.kmButn:hover{
+    cursor: pointer;
+    background: var(--color-primary2);
+    background: var(--color-primary);
+    background: linear-gradient(
+      70deg,
+      var(--color-primary2) 10%,
+      var(--color-primary) 115%
+    );
+}
+
+.resultContainer{
+    width: 20rem;
+    margin: 1rem auto;
+    height: 5rem;
+    padding: 1.2rem;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.6rem;
+    border-left: 1px solid rgba(94, 93, 93, 0.3);
+    border-top: 1px solid rgba(94, 93, 93, 0.3);
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.resultTitle{
+    font-size: 2rem;
+    margin: 0;
+   
+}
+
+.show{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+
+@media (640px <= width <= 768px) {
+    .resultContainer{
+        width: 16rem;
+        margin: 1rem auto;
+        height: 4rem;
+    }
+
+    .kmTitle {
+        font-size: var(--sectionTitleFontSizeSmall);
+    }
+  
+    .resultTitle{
+        font-size: 1.2rem;
+    }
+
+    .airplane{
+        width: 7rem;
+        height: 7rem;
+    }
+    
+  }
+  
+  @media (width <= 640px) {
+    .sectionKm {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 1rem 0.5rem;
+    }
+
+    .kmTitle {
+        font-size: var(--sectionTitleFontSizeXs);
+    }
+
+    .inputs {
+        flex-direction: column;
+        margin: 1rem auto;
+        height: auto;
+    }
+
+    .kmText {
+        margin-bottom: 1rem;
+    }
+
+    .errorMessage {
+        text-align: center;
+    }
+
+    .kmButn{ 
+        padding: 0.6rem 1rem;
+        font-size: 1rem;
+    }
+
+    .resultContainer{
+        width: 12rem;
+        margin: 1rem auto;
+        height: 3rem;
+    }
+  
+    .resultTitle{
+        font-size: 1rem;
+    }
+
+    .show{
+        font-size: 1rem;
+    }
+
+    .airplane{
+        display: none;
+    }
+  }

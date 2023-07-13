@@ -1,0 +1,64 @@
+.toInfoSection{
+    background-color: var(--color-primary);
+    padding: 2rem 0;
+}
+
+.infoTitle {
+    color: var(--text-color-primary);
+    margin: -1rem 0 1rem 0;
+}
+
+.infoBtn {
+  border: 1px solid #494949;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.5rem;
+  color: var(--text-color-primary);
+  font-size: 1.2rem;
+  max-width: 450px;
+  margin: 0 auto;
+  cursor: pointer;
+  background: var(--color-primary);
+  background: var(--color-primary2);
+  background: linear-gradient(
+    0deg,
+    var(--color-primary) 0%,
+    var(--color-primary2) 100%
+  );
+  transition: 0.3s all ease-in;
+}
+
+.infoBtn:hover {
+    cursor: pointer;
+    background: var(--color-primary2);
+    background: var(--color-primary);
+    background: linear-gradient(
+      70deg,
+      var(--color-primary2) 10%,
+      var(--color-primary) 115%
+    );
+}
+
+@media (640px <= width <= 768px) {
+  .infoTitle {
+    font-size: var(--sectionTitleFontSizeSmall);
+  }
+}
+
+
+@media (width <= 640px) {
+  .toInfoSection {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 1rem 0.5rem;
+  }
+
+  .infoTitle {
+    font-size: var(--sectionTitleFontSizeXs);
+  }
+
+  .infoBtn {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+  }
+}

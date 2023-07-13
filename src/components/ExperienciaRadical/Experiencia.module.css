@@ -1,0 +1,70 @@
+.experienceSection{
+    background-color: black;
+    color: white;
+    padding-top: 0.5rem;
+    height: calc( 100vh - 5rem);
+}
+
+.destinationTitle{
+    margin: 0.5rem auto;
+    font-size: 1.8rem;
+}
+
+.destinationSubtitle{
+    margin: 0.5rem auto;
+    font-size: 1.4rem;
+    background-color: black;
+}
+
+.destinationBtn{
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-size: 1rem;
+    max-width: 400;
+    margin: 0.5rem auto 1rem auto;
+    background: var(--color-primary);
+    background: var(--color-primary2);
+    background: linear-gradient(
+      0deg,
+      var(--color-primary) 0%,
+      var(--color-primary2) 100%
+    );
+    transition: 0.3s all ease-in;
+}
+
+.destinationBtn:hover{
+    cursor: pointer;
+    background: var(--color-primary2);
+    background: var(--color-primary);
+    background: linear-gradient(
+      70deg,
+      var(--color-primary2) 10%,
+      var(--color-primary) 115%
+    );
+}
+
+.videoWorld{
+    height: 500px;
+    width: 500px;
+}
+
+.frame{
+    margin-top: 1rem;
+    border: none;
+    width: 47vw;
+    height: 61vh;
+}
+
+@media (768px <= width <= 840px) {
+
+}
+
+@media (640px <= width <= 768px) {
+    
+}
+
+@media (width >= 640px) {
+    
+}
