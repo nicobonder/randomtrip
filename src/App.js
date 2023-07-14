@@ -10,6 +10,7 @@ import Navbar from './components/navbar/Navbar';
 import RandomTrip from './components/RandomTrip';
 import Information from './components/information/Information';
 import SendInformation from './components/information/SendInformation';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path='sendInformation' element={<SendInformation />}  />
       </Routes>
       </MyContext.Provider>
+      <Footer />
     </div>
   );
 }
