@@ -2,8 +2,8 @@
     background-color: black;
     color: white;
     padding-top: 0.5rem;
-    height: calc( 100vh - 5rem);
-    width: 100vw;
+    height: calc(100vh - 8.6rem);
+    width: 100%;
 }
 
 .destinationTitle{
@@ -46,6 +46,15 @@
     );
 }
 
+.ExperienceWrapper{
+    width: 70vw;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    margin: auto;  
+}
+
 .videoWorld{
     height: auto;
     width: 50vw;
@@ -54,14 +63,40 @@
 .frame{
     margin-top: 1rem;
     border: none;
-    width: 47vw;
+    width: 52vw;
     height: 61vh;
 }
 
+@media (width <= 1200px) {
+    .frame{
+        width: 65vw;
+    }
+}
+
 @media (width <= 840px) {
+    .experienceSection {
+        height: calc(100vh - 8.1rem);
+        padding-bottom: 1rem;
+    }
+
     .videoWorld{
         width: 70vw;
     }   
+
+    .frame{
+        width: 65vw;
+        height: 55vh;
+    }
+
+    .destinationTitle {
+        font-size: var(--sectionTitleFontSizeXs);
+    }
+
+    .destinationBtn{
+        padding: 0.5rem 0.9rem;
+        font-size: 0.9rem;
+        margin: 0.5rem auto;
+    }
 }
 
 @media (width <= 640px) {
@@ -72,5 +107,10 @@
     .videoWorld{
         margin-top: 1rem;
         width: 80vw;
+    }
+
+    .frame{
+        width: 80vw;
+        height: 55vh;
     }
 }

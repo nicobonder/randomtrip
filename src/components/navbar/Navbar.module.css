@@ -31,7 +31,8 @@
     padding: 0.1rem;
 }
 
-@media (width <= 640px) {
+
+@media (width <= 840px) {
     .navbarSection{
         display: flex;
         margin: 0;
