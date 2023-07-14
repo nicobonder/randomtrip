@@ -1,7 +1,7 @@
 .experienceSection{
     background-color: black;
     color: white;
-    padding-top: 0.5rem;
+    padding: 1.5rem 0;
     height: calc(100vh - 8.6rem);
     width: 100%;
 }
@@ -19,12 +19,12 @@
 
 .destinationBtn{
     border: none;
-    padding: 0.6rem 1rem;
+    padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     color: #fff;
     font-size: 1rem;
     max-width: 400;
-    margin: 0.5rem auto 1rem auto;
+    margin: 0.5rem auto;
     background: var(--color-primary);
     background: var(--color-primary2);
     background: linear-gradient(
@@ -63,13 +63,14 @@
 .frame{
     margin-top: 1rem;
     border: none;
-    width: 52vw;
-    height: 61vh;
+    width: 48vw;
+    height: 56vh;
 }
 
 @media (width <= 1200px) {
     .frame{
         width: 65vw;
+        height: 54vh;
     }
 }
 
