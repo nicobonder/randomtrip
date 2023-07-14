@@ -3,6 +3,7 @@
     color: white;
     padding-top: 0.5rem;
     height: calc( 100vh - 5rem);
+    width: 100vw;
 }
 
 .destinationTitle{
@@ -46,8 +47,8 @@
 }
 
 .videoWorld{
-    height: 500px;
-    width: 500px;
+    height: auto;
+    width: 50vw;
 }
 
 .frame{
@@ -57,14 +58,19 @@
     height: 61vh;
 }
 
-@media (768px <= width <= 840px) {
-
+@media (width <= 840px) {
+    .videoWorld{
+        width: 70vw;
+    }   
 }
 
-@media (640px <= width <= 768px) {
+@media (width <= 640px) {
+    .experienceSection{
+        height: calc( 100vh - 4.5rem);
+    }
     
-}
-
-@media (width >= 640px) {
-    
+    .videoWorld{
+        margin-top: 1rem;
+        width: 80vw;
+    }
 }
