@@ -17,8 +17,8 @@ export default function Help () {
         
             <p className='helpText'>Entonces podés ver RandomTrip como un ejercicio de creatividad, <span className='helpSpan'>una herramienta que podés usar para inspirarte</span> y animarte a encontrar en tu próximo viaje cosas que ni siquiera estabas buscando.</p>
             <div className='helpButtons'>
-                <Link to='trip' className='helpBtn'>Viaje Random</Link>
-                <Link to='experience' className='helpBtn'>Tu Destino</Link>
+                <Link to='/trip' className='helpBtn'>Viaje Random</Link>
+                <Link to='/experience' className='helpBtn'>Tu Destino</Link>
             </div>
 
         </div>
