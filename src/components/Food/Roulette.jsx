@@ -4,6 +4,7 @@ import { BiTrash, BiGridVertical, BiPlus } from "react-icons/bi";
 import { v4 as uuidv4 } from "uuid";
 import Food from "./Food";
 import './Food.css'
+import Tooltip from "../../common/Tooltip/Tooltip";
 
 const DraggeableForm = () => {
   const [inputList, setInputList] = useState([
@@ -88,11 +89,16 @@ const DraggeableForm = () => {
 
   return (
     <section className="containerFood">
+      <Tooltip
+        title = "¿Qué vas a comer?"
+        content = "El resultado debería servirte como excusa para buscar un lugar donde comer que tenga platos lo más parecido posible a la opción que te tocó"
+        divColor = "#fff"
+        borderColor = "#fff"
+        // top = "-5px"
+        // left = "135%"
+      />
     <div className="main-form">
-      <div className="text-title">
-        <h2>¿Qué vas a comer?</h2>
-      </div>
-      {/*  */}
+      
       <Food data={inputList} />
       <h3>Elegí tus opciones</h3>
       <DragDropContext  onDragEnd={handleOnDragEnd}>

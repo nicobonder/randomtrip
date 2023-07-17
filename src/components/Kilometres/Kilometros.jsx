@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import s from "./kilometros.module.css";
+import "./Kilometers.css";
 import { useContext } from "react";
 import { MyContext } from "../../myContext";
 
-import airplane from '../../assets/airplane.png'
+import airplane from "../../assets/airplane.png"
 import { motion } from "framer-motion"
+import Tooltip from "../../common/Tooltip/Tooltip";
 
 export function validate(input) {
   let error = {
@@ -51,52 +52,57 @@ export default function Kilometros() {
 
   useEffect(() => {
     setError(validate(input));
-  }, [input]); // Ejecuta la validación cuando el estado 'input' cambie
+  }, [input]); // Ejecuta la validación cuando el estado "input" cambie
 
   const gradientStyle = {
     fill: "url(#gradient)",
   };
 
   return (
-    <section className={s.sectionKm}>
-      <h2 className={s.kmTitle}>Kilómetros aleatorios</h2>
-      <p className={s.kmText}>
+    <section className="sectionKm">
+      <Tooltip
+        title = "Kilómetros aleatorios"
+        content = "El número que salga representa la distancia aproximada que debería separarte del destino que elijas"
+        divColor = "#000"
+        borderColor = "#000"
+      />
+      <p className="kmText">
         En esta sección vamos a establecer cuántos kilómetros deberías llegar a
         tu próximo destino.
       </p>
       <form onSubmit={handleSubmit}>
-        <p className={s.kmText}>
+        <p className="kmText">
           Primero decinos cuántos kilómetros querés viajar como mínimo y como
           máximo. Después hace click en Calcular
         </p>
-        <div className={s.inputs}>
+        <div className="inputs">
           <div>
             <input
-              type='text'
-              name='min'
+              type="text"
+              name="min"
               value={input.min}
-              placeholder='Kilómetros mínimos'
+              placeholder="Kilómetros mínimos"
               onChange={handleInputChange}
-              className={error.min && s.danger}
-              id='minId'
+              className={`${error.min ? 'danger' : ''}`}
+              id="minId"
             />
-            {error.min && <p className={s.errorMessage}>{error.min}</p>}
+            {error.min && <p className="errorMessage">{error.min}</p>}
           </div>
-          <div className='kmInputDiv'>
+          <div>
             <input
-              type='text'
-              name='max'
+              type="text"
+              name="max"
               value={input.max}
-              placeholder='Kilómetros máximos'
+              placeholder="Kilómetros máximos"
               onChange={handleInputChange}
-              className={error.max && s.danger}
-              id='maxId'
+              className={`${error.max ? 'danger' : ''}`}
+              id="maxId"
             />
-            {error.max && <p className={s.errorMessage}>{error.max}</p>}
+            {error.max && <p className="errorMessage">{error.max}</p>}
           </div>
         </div>
         <button
-          className={s.kmButn}
+          className="kmButn"
           disabled={
             !input.min ||
             !input.max ||
@@ -112,14 +118,14 @@ export default function Kilometros() {
         >
           Calcular
         </button>
-        <div className={s.resultContainer}>
-          <h3 className={s.resultTitle}>Tenés que viajar:</h3>
-          <p className={s.show}>{km} kilómetros</p>
+        <div className="resultContainer">
+          <h3 className="resultTitle">Tenés que viajar:</h3>
+          <p className="show">{km} kilómetros</p>
         </div>
       </form>
-      <motion.img className={s.airplane} src={airplane}
-        animate={{ x: ['100%', '180%'], y: ['10%', '-120%'] }}
-        transition={{ duration: 2, ease: 'easeInOut' }}
+      <motion.img className="airplane" src={airplane}
+        animate={{ x: ["100%", "180%"], y: ["10%", "-120%"] }}
+        transition={{ duration: 2, ease: "easeInOut" }}
       />
     </section>
   );

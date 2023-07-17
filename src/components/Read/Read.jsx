@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import s from "./read.module.css";
+import "./read.css";
 
 import { useContext } from "react";
 import { MyContext } from "../../myContext";
+import Tooltip from "../../common/Tooltip/Tooltip";
 
 export default function Read() {
   const [face, setFace] = useState(null);
@@ -37,31 +38,36 @@ export default function Read() {
   }, [face, status, setRead]);
 
   return (
-    <div className={s.sectionRead}>
-      <h2 className={s.readTitle}>
-        Vas a investigar o te vas a dejar sorprender?
-      </h2>
-      <p className={s.textRead}>
+    <div className="sectionRead">
+      <Tooltip
+        title = "¿Vas a investigar o te vas a dejar sorprender?"
+        content = "Algunos prefieren saber todo antes de llegar a un lugar, otros no leen nada y se sorprenden al llegar. La moneda va a decidir qué tenés que hacer"
+        divColor = "#000"
+        borderColor = "#000"
+        // top = "-90px"
+        // left = "-220%"
+      />
+      <p className="textRead">
         Tirá la moneda y si te aparece la Estatua te ponés a leer sobre tu
         próximo destino, y si te sale Washington, te dejás llevar.
       </p>
 
-      <div className={s.coinContainer}>
-        <div
-          className={`${s.coin} ${face === "faceOne" ? s.animateFaceOne : s.animateFaceTwo} ${isFlipped ? s.startAnimation : ""}`}
-          onClick={flipCoin}
-        >
-          <div className={s.faceOne}></div>
-          <div className={s.faceTwo}></div>
+      <div className="coinContainer">
+      <div
+  className={`coin ${face === "faceOne" ? "animateFaceOne" : "animateFaceTwo"} ${isFlipped ? "startAnimation" : ""}`}
+  onClick={flipCoin}
+>
+          <div className="faceOne"></div>
+          <div className="faceTwo"></div>
         </div>
       </div>
 
-      <button id="flip" className={s.flipBtn} onClick={flipCoin}>
+      <button id="flip" className="flipBtn" onClick={flipCoin}>
         Lanzame!
       </button>
 
-      <div className={s.resultContainer}>
-        <p id="status" className={s.result}>
+      <div className="resultContainer">
+        <p id="status" className="result">
           {status}
         </p>
       </div>

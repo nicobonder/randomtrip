@@ -1,5 +1,6 @@
 .informationSection {
     width: 80%;
+    height: 81vh;
     display: flex;
     flex-direction: column;
     margin: 1rem auto;
@@ -9,16 +10,27 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 60%;
-    margin: 2rem auto 0 auto;
+    margin: 1rem auto;
 }
 
-.informationTitle {
+.infoTitle {
     font-size: 1.8rem;
 }
 
-.infoText{
+.infoForm h2{
     font-size: 1.5rem;
+    text-align: left;
+    margin-top: 0;
+}
+
+.infoDescription{
+    align-items: flex-start;
+    margin: 0rem;
+}
+
+.descriptionText {
+    text-align: left;
+    font-size: var(--text-size);
 }
 
 .BtnDiv {
@@ -95,13 +107,30 @@
     );
 }
 
+@media (width <=900px) {
+    .descriptionText {
+        font-size: var(--text-sizeXS);
+    }
+}
+
+@media (width <=768px) {
+    .informationSection {
+        width: 85%;
+    }
+}
+
 @media (width <= 640px) {
-    .informationTitle {
+    .infoTitle {
         font-size: var(--sectionTitleFontSizeXs);
+        text-align: center;
     }
 
     .infoForm{
         width: 95%;
+    }
+
+    .infoForm h2 {
+        font-size: var(--text-size);
     }
 
     .infoText {

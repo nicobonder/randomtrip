@@ -79,13 +79,6 @@ const Food = ({ data }) => {
       <div className="resultContainer">
         <h3 className="result"> {!mustSpin && data[prizeNumber] ? data[prizeNumber].text : "Girando"}</h3>
       </div>
-      {/* <button
-        className="prize-message"
-        // onClick={handleSpinClick}
-        // disabled={mustSpin}
-      >
-        {!mustSpin && data[prizeNumber] ? data[prizeNumber].text : "Girando"}
-      </button> */}
     </>
   );
 };

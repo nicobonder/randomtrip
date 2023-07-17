@@ -10,11 +10,6 @@
     color: var(--text-color-primary);
   }
   
-  .readTitle {
-    margin: var(--sectionTitleMargin);
-    font-size: var(--sectionTitleFontSize);
-  }
-
   .textRead {
     font-size: var(--text-size);
   }
@@ -135,9 +130,9 @@
   }
 
   @media (640px <= width <= 768px) {
-    .readTitle {
+    /* .readTitle {
         font-size: var(--sectionTitleFontSmall);
-      }
+      } */
 
     .resultContainer{
         width: 16rem;
@@ -159,10 +154,10 @@
         background-size: 18%;
         background-position: 90% 36%;
     }
-
+/* 
     .readTitle {
         font-size: var(--sectionTitleFontXs);
-      }
+      } */
 
       .textRead {
         font-size: var(--text-sizeXS);
