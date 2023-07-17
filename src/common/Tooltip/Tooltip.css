@@ -1,6 +1,7 @@
 .titleWrapper {
     display: flex;
     flex-direction: row;    
+    margin: 0 auto;
 }
 
 .sectionTitle {
@@ -20,6 +21,7 @@
     position: relative;
     display: inline-block;
     cursor: pointer;
+    top: -4px;
 }
 
 .toolpitWrapper .tooltipText {
@@ -33,6 +35,7 @@
     position: absolute;
     z-index: 100;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s all;
 }
 
 .toolpitWrapper .tooltipText::after {
@@ -55,4 +58,49 @@
     top: 50%;
     right: 100%;
     border-color: transparent #2E2E2E transparent transparent;
+}
+
+@media (width < 1000px) {
+    .toolpitWrapper.right .tooltipText {
+        top: 20px;
+        left: -805%;
+    }
+
+    .toolpitWrapper {
+        top: -3px;
+    }
+
+    .sectionTitle {
+        font-size: var(--sectionTitleFontSizeSmall);
+    }
+
+    .toolpitWrapper{
+        height: 0.7rem;
+        width: 0.7rem;
+        font-size: 0.6rem;
+        font-weight: 600;
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        ;
+        align-self:first baseline;
+    }
+}
+
+@media (width <= 640px) {
+    .titleWrapper {
+        width: 90%;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sectionTitle {
+        font-size: var(--sectionTitleFontSizeXs);
+        margin: 0.2rem;
+    }
+
+    .toolpitWrapper.right .tooltipText {
+        left: -1455%;
+    }
 }

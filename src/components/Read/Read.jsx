@@ -44,6 +44,8 @@ export default function Read() {
         content = "Algunos prefieren saber todo antes de llegar a un lugar, otros no leen nada y se sorprenden al llegar. La moneda va a decidir qué tenés que hacer"
         divColor = "#000"
         borderColor = "#000"
+        // top = "-90px"
+        // left = "-220%"
       />
       <p className="textRead">
         Tirá la moneda y si te aparece la Estatua te ponés a leer sobre tu

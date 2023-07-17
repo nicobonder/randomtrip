@@ -63,6 +63,8 @@ export default function Budget() {
         content = "Tener un presupuesto diario máximo te ayuda a ser creativo, porque te obliga a buscar la forma de no superarlo"
         divColor = "#fff"
         borderColor = "#fff"
+        // top = "-5px"
+        // left = "135%"
       />
       <p className='budgetText'>Tu presupesto máximo va a ser la multiplicación del mínimo que pongas y el número que te toque en la carta que elijas.</p>
       <label className="text" htmlFor="presupuestoMin">Tu presupuesto mínimo: </label>

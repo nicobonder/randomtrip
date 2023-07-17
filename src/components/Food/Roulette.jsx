@@ -94,6 +94,8 @@ const DraggeableForm = () => {
         content = "El resultado debería servirte como excusa para buscar un lugar donde comer que tenga platos lo más parecido posible a la opción que te tocó"
         divColor = "#fff"
         borderColor = "#fff"
+        // top = "-5px"
+        // left = "135%"
       />
     <div className="main-form">
       

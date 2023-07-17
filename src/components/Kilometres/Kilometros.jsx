@@ -60,11 +60,6 @@ export default function Kilometros() {
 
   return (
     <section className="sectionKm">
-      {/* <div className="titleWrapper">
-        <h2 className="kmTitle">Kilómetros aleatorios</h2>
-        <p className="toolpitWrapper right">?<span className="tooltipText">El número que salga representa la distancia aproximada que debería separarte del destino que elijas</span></p>
-      </div> */}
-
       <Tooltip
         title = "Kilómetros aleatorios"
         content = "El número que salga representa la distancia aproximada que debería separarte del destino que elijas"
@@ -93,7 +88,7 @@ export default function Kilometros() {
             />
             {error.min && <p className="errorMessage">{error.min}</p>}
           </div>
-          <div className="kmInputDiv">
+          <div>
             <input
               type="text"
               name="max"
