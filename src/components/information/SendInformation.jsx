@@ -104,7 +104,7 @@ export default function SendInformation() {
         <h1 className='informationTitle'>
           Estas son las pautas para tu próximo viaje
         </h1>
-        <div>
+        <div className="infoTextWrapper">
           <h2 className='infoText'>Tenés que hacer {km} kilómetros</h2>
           <h2 className='infoText'>Tu opción de comida es {food}</h2>
           <h2 className='infoText'>Tenés que {read}</h2>

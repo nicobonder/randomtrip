@@ -1,3 +1,9 @@
+.SendInformation {
+  height: 80vh;
+  width: 90%;
+  margin: 0 auto;
+}
+
 .logoSend {
     width: 5rem;
     height: 5rem;
@@ -11,8 +17,14 @@
     margin: var(--sectionTitleMargin); 
 }
 
+.infoTextWrapper {
+  width:58%;
+  margin: 0 auto;
+}
+
 .infoText {
-  margin: 1rem auto 1rem 1rem;
+  text-align: center;
+  margin: 1rem;
 }
 
 .sendInfoButton {
@@ -84,6 +96,11 @@
     padding: 1rem 0.5rem;
   }
 
+  .infoTextWrapper {
+    width:75%;
+    margin: 0 auto;
+  }
+
   .inputDiv {
     width: 45%;
   }
@@ -95,8 +112,7 @@
 
   .informationTitle {
     font-size: 1.3rem;
-    margin-left: 0.5rem;
-    text-align: left;
+    text-align: center;
     padding: 0 0.5rem;
   }
 
