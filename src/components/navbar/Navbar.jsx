@@ -12,6 +12,8 @@ export default function Navbar() {
     <nav className={s.links}>
         <NavLink className={s.link} to='trip'>Viaje Random</NavLink>
         <NavLink className={s.link} to='experience'>Tu destino</NavLink>
+        <NavLink className={s.link} to='help'>?</NavLink>
+
       </nav>
     </div>
   )

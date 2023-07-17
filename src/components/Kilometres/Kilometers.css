@@ -12,14 +12,6 @@
     height: 10rem;
 }
 
-
-/* .kmTitle {
-    margin: var(--sectionTitleMargin);
-    font-size: var(--sectionTitleFontSize);
-    color: var(--text-color-primary);
-    margin-right: 0.2rem;
-} */
-
 .inputs{
     display: flex;
     width: 90%;
@@ -82,7 +74,6 @@ input{
       var(--color-primary2) 100%
     );
     transition: 0.3s all ease-in;
-
 }
 
 .kmButn:hover{
