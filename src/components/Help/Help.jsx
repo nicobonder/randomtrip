@@ -15,7 +15,7 @@ export default function Help () {
             <p className='helpText'>La sección de <span className='helpSpan'>Tu Destino</span> es más alocada todavía. Al hacer clic en el botón vas a encontrar una ciudad totalmente random de cualquier parte del mundo. 
                 Sí, sé que no vas a ir a cualquier pueblito que te aparezca en una página, pero tal vez el nombre de ese pueblito te despierta la curiosidad y te ponés a investigar y descubrís una región de la que no habías escuchado hablar en un país al que nunca pensaste ir. Y ahora ya tenés una idea extraña, que tal vez te haga planificar un viaje que jamás habías soñado.</p>
         
-            <p className='helpText'>Entonces podés ver RandomTrip como un ejercicio de creatividad, una herramienta que podés usar para inspirarte y animarte a encontrar en tu próximo viaje cosas que ni siquiera estabas buscando.</p>
+            <p className='helpText'>Entonces podés ver RandomTrip como un ejercicio de creatividad, <span className='helpSpan'>una herramienta que podés usar para inspirarte</span> y animarte a encontrar en tu próximo viaje cosas que ni siquiera estabas buscando.</p>
             <div className='helpButtons'>
                 <Link to='trip' className='helpBtn'>Viaje Random</Link>
                 <Link to='experience' className='helpBtn'>Tu Destino</Link>
