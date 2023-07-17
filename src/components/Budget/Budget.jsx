@@ -4,6 +4,7 @@ import './Budget.css';
 
 import { useContext } from 'react';
 import { MyContext } from '../../myContext';
+import Tooltip from '../../common/Tooltip/Tooltip';
 
 export default function Budget() {
   const [cards, setCards] = useState({//cada carta empieza con un state false y valor 0
@@ -57,8 +58,13 @@ export default function Budget() {
 
   return (
     <div className="sectionPresupuesto">
-      <h2 className="presupuestoTitle">Elegí tu presupuesto máximo</h2>
-      <p className='budgetText'>Tu presupesto total va a ser la multiplicación del mínimo que pongas y el número que te toque en la carta que elijas.</p>
+      <Tooltip
+        title = "Elegí tu presupuesto máximo"
+        content = "Tener un presupuesto diario máximo te ayuda a ser creativo, porque te obliga a buscar la forma de no superarlo"
+        divColor = "#fff"
+        borderColor = "#fff"
+      />
+      <p className='budgetText'>Tu presupesto máximo va a ser la multiplicación del mínimo que pongas y el número que te toque en la carta que elijas.</p>
       <label className="text" htmlFor="presupuestoMin">Tu presupuesto mínimo: </label>
       <input
         className="inputPres"
@@ -77,7 +83,7 @@ export default function Budget() {
          <CardBudget key='four' id='four' min='1' max='20' showNumber={cards.four} handleCard={handleCard} isDisabled={isDisabled} />
         </ul>
       <div className="resultContainer">
-        <h3 className="resultado"> Tu presupuesto total es ${total}</h3>
+        <h3 className="resultado"> Tu presupuesto máximo es ${total}</h3>
       </div>
 
     </div>
