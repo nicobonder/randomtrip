@@ -1,0 +1,58 @@
+.titleWrapper {
+    display: flex;
+    flex-direction: row;    
+}
+
+.sectionTitle {
+    text-align: center;
+    margin: 0 0.2rem 1rem auto;
+    font-size: var(--sectionTitleFontSize);
+    /* color: black; */
+}
+
+.toolpitWrapper{
+    border: 2px solid black;
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.toolpitWrapper .tooltipText {
+    visibility: hidden;
+    width: 9rem;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    padding: 0.3rem 0.2rem;
+    position: absolute;
+    z-index: 100;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.toolpitWrapper .tooltipText::after {
+    position: absolute;
+    border-width: 5px;
+    border-style: solid;
+}
+
+.toolpitWrapper:hover .tooltipText {
+    visibility: visible;
+}
+
+.toolpitWrapper.right .tooltipText {
+    top: -5px;
+    left: 135%;
+}
+
+.toolpitWrapper.right .tooltipText::after {
+    margin-top: -0.3rem;
+    top: 50%;
+    right: 100%;
+    border-color: transparent #2E2E2E transparent transparent;
+}

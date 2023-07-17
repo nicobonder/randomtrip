@@ -91,7 +91,6 @@
     margin-right: 15px;
     position: relative;
   }
-
   
   .item {
     padding: 10px 0;
@@ -100,11 +99,11 @@
     width: 85%;
   }
   
-  .text-title h2 {
+  /* .text-title h2 {
     font-size: var(--sectionTitleFontSize);
     color: var(--text-color-secondary);
     margin: var(--sectionTitleMargin); 
-  }
+  } */
     
   i {
     margin-right: 1rem;
@@ -235,9 +234,9 @@
       font-size: 1.2rem;
   }
 
-  .text-title h2 {
+  /* .text-title h2 {
     font-size: var(--sectionTitleFontSizeXs);
-  }
+  } */
 
   
   .list-item {
