@@ -1,3 +1,7 @@
+RandomTrip offers two exciting sections:
+"Tu Destino": Click the button to discover the name of a random city and its location on the map.
+"Viaje Random": Play fun games to craft a unique and unconventional trip, providing a guide to create a truly extraordinary travel experience
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
